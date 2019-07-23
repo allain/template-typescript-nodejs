@@ -1,7 +1,8 @@
 {
   "name": "template-typescript-nodejs",
+  "private": true,
   "version": "1.0.0",
-  "description": "A template project for building npm modules.",
+  "description": "A template project for building node.js modules using typescript.",
   "main": "./dist/index.cjs.js",
   "module": "./dist/index.cjs.js",
   "scripts": {
@@ -14,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/allain/template-npm-project.git"
+    "url": "git+https://github.com/allain/template-typescript-nodejs.git"
   },
   "keywords": [
     "template",
@@ -24,13 +25,14 @@
   "author": "Allain Lalonde <allain.lalonde@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/allain/template-npm-project/issues"
+    "url": "https://github.com/allain/template-typescript-nodejs/issues"
   },
-  "homepage": "https://github.com/allain/template-npm-project#readme",
+  "homepage": "https://github.com/allain/template-typescript-nodejs#readme",
   "devDependencies": {
     "@babel/core": "^7.4.3",
     "@babel/preset-env": "^7.4.3",
     "@types/jest": "^24.0.15",
+    "@types/node": "^12.6.8",
     "babel-jest": "^24.7.1",
     "builtin-modules": "^3.1.0",
     "concurrently": "^4.1.1",
