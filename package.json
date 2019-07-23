@@ -1,0 +1,48 @@
+{
+  "name": "template-typescript-nodejs",
+  "version": "1.0.0",
+  "description": "A template project for building npm modules.",
+  "main": "./dist/index.cjs.js",
+  "module": "./dist/index.cjs.js",
+  "scripts": {
+    "build": "rollup --config ./rollup.config.js",
+    "build:watch": "npm run build -- --watch",
+    "clean": "rimraf dist/ coverage/",
+    "dev": "concurrently --kill-others 'npm run build:watch' 'npm run test:watch'",
+    "test": "jest",
+    "test:watch": "jest --watchAll"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/allain/template-npm-project.git"
+  },
+  "keywords": [
+    "template",
+    "build",
+    "rollup"
+  ],
+  "author": "Allain Lalonde <allain.lalonde@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/allain/template-npm-project/issues"
+  },
+  "homepage": "https://github.com/allain/template-npm-project#readme",
+  "devDependencies": {
+    "@babel/core": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "@types/jest": "^24.0.15",
+    "babel-jest": "^24.7.1",
+    "builtin-modules": "^3.1.0",
+    "concurrently": "^4.1.1",
+    "jest": "^24.8.0",
+    "rimraf": "^2.6.3",
+    "rollup": "^1.17.0",
+    "rollup-plugin-commonjs": "^10.0.1",
+    "rollup-plugin-node-builtins": "^2.1.2",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-typescript": "^1.0.1",
+    "ts-jest": "^24.0.2",
+    "tslib": "^1.10.0",
+    "typescript": "^3.5.3"
+  }
+}
