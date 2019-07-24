@@ -1,6 +1,5 @@
 import fs from "fs"
 import path from "path"
-
 import builtins from "rollup-plugin-node-builtins"
 import typescript from "rollup-plugin-typescript2"
 import resolve from "rollup-plugin-node-resolve"
