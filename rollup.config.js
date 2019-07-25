@@ -1,5 +1,6 @@
 import fs from "fs"
 import path from "path"
+
 import builtins from "rollup-plugin-node-builtins"
 import typescript from "rollup-plugin-typescript2"
 import resolve from "rollup-plugin-node-resolve"
@@ -12,11 +13,13 @@ const builds = [
     output: [
       {
         file: "dist/index.cjs.js",
-        format: "cjs"
+        format: "cjs",
+        exports: "named"
       },
       {
         file: "dist/index.esm.js",
-        format: "esm"
+        format: "esm",
+        exports: "named"
       }
     ],
     plugins: [
@@ -41,12 +44,14 @@ if (fs.existsSync(path.join(__dirname, "src", "bin.ts"))) {
       }
     ],
     plugins: [
-      typescript({}),
+      typescript({
+        useTsconfigDeclarationDir: true
+      }),
       builtins(),
+      commonjs({}),
       resolve({
         preferBuiltins: true
-      }),
-      commonjs({})
+      })
     ]
   })
 }
