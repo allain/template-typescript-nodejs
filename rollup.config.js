@@ -40,7 +40,8 @@ if (fs.existsSync(path.join(__dirname, "src", "bin.ts"))) {
     output: [
       {
         file: "dist/bin.cjs.js",
-        format: "cjs"
+        format: "cjs",
+        exports: "named"
       }
     ],
     plugins: [
