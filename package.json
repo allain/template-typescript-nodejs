@@ -7,11 +7,11 @@
   "module": "./dist/index.cjs.js",
   "scripts": {
     "build": "tsc",
-    "build:watch": "tsc --watch",
     "clean": "rimraf dist/ coverage/",
-    "dev": "concurrently --kill-others 'npm run build:watch' 'npm run test:watch'",
+    "dev": "concurrently --kill-others -n build,test 'npm:watch:build' 'npm:watch:test'",
     "test": "jest",
-    "test:watch": "jest --watchAll"
+    "watch:build": "tsc --watch",
+    "watch:test": "jest --watchAll"
   },
   "repository": {
     "type": "git",
@@ -19,8 +19,7 @@
   },
   "keywords": [
     "template",
-    "build",
-    "rollup"
+    "build"
   ],
   "author": "Allain Lalonde <allain.lalonde@gmail.com>",
   "license": "ISC",

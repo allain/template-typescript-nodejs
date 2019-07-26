@@ -4,20 +4,18 @@ This repo represents a simple project with an ever improving build pipeline inte
 
 ## Current Scripts
 
-### `npm run dev`
+**`npm run dev`**
 
-Runs `npm run build:watch` and `npm run test:watch` concurrently.
+Runs `npm run watch:build` and `npm run watch:test` concurrently.
 
-### `npm run build` and `npm run build:watch`
+**`npm run build`**
 
-Uses rollup to build quality javascript bundles that have been tree shaken, and generated for esm, and commonjs.
+Builds dist/_.js files from src/_.ts using the typescript compiler.
 
-If src/bin.ts file is present it will also generate a dist/bin.cjs.js file.
-
-### `npm test` and `npm run test:watch`
+**`npm test`**
 
 Supports running any defined jest test in ./tests/\*
 
-### `npm run clean`
+**`npm run clean`**
 
 deletes generated files and any generated code reports (coverage, etc).
