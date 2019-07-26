@@ -6,8 +6,8 @@
   "main": "./dist/index.cjs.js",
   "module": "./dist/index.cjs.js",
   "scripts": {
-    "build": "rollup --config ./rollup.config.js",
-    "build:watch": "npm run build -- --watch",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
     "clean": "rimraf dist/ coverage/",
     "dev": "concurrently --kill-others 'npm run build:watch' 'npm run test:watch'",
     "test": "jest",
@@ -34,18 +34,10 @@
     "@types/jest": "^24.0.15",
     "@types/node": "^12.6.8",
     "babel-jest": "^24.7.1",
-    "builtin-modules": "^3.1.0",
     "concurrently": "^4.1.1",
     "jest": "^24.8.0",
     "rimraf": "^2.6.3",
-    "rollup": "^1.17.0",
-    "rollup-plugin-commonjs": "^10.0.1",
-    "rollup-plugin-json": "^4.0.0",
-    "rollup-plugin-node-builtins": "^2.1.2",
-    "rollup-plugin-node-resolve": "^5.2.0",
-    "rollup-plugin-typescript2": "^0.22.0",
     "ts-jest": "^24.0.2",
-    "tslib": "^1.10.0",
     "typescript": "^3.5.3"
   }
 }
